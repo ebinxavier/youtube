@@ -1,0 +1,18 @@
+@media (max-width: 800px) {
+  .nav-bar-normal {
+    display: none;
+  }
+  .nav-bar-minimal {
+    display: block !important;
+  }
+}
+
+.nav-bar-normal {
+  background-color: val(--color-bg-primary);
+  overflow-y: auto;
+}
+
+.nav-bar-minimal {
+  background-color: val(--color-bg-primary);
+  display: none;
+}

@@ -1,0 +1,11 @@
+.item {
+  vertical-align: middle;
+}
+.item-text {
+  padding-left: 15px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.hover-item :hover{
+    background-color: red !important;
+}

@@ -1,0 +1,24 @@
+html {
+  --color-text: white;
+  --color-bg-primary: #212121;
+  --color-bg-secondary:#191919;
+  --color-bg-search:rgb(19, 19, 19);
+  --color-btn-primary:#323232;
+  --color-primary:white;
+  --color-secondary:#aaaaaa;
+}
+
+.primary-bg {
+  background-color: var(--color-bg-primary);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-bg-primary) !important;
+  color: var(--color-primary);
+}
+
+textarea:focus, input:focus{
+  outline: white;
+}
