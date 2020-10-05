@@ -20,7 +20,7 @@ const RightButtons = () => {
             width: "30px",
             borderRadius: "50%",
           }}
-          src="/images/avatar.png"
+          src="/youtube/avatar.png"
           alt="avatar"
         />
       </IconButton>

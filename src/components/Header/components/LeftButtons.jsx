@@ -10,7 +10,7 @@ const LeftButtons = () => {
       </IconButton>
       <span
         style={{
-          backgroundImage: "url('/images/logo.png')",
+          backgroundImage: "url('/youtube/logo.png')",
           width: "100px",
           height: "30px",
           backgroundRepeat: "no-repeat",
