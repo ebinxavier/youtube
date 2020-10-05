@@ -66,7 +66,7 @@ const Home = () => {
       <Backdrop className={classes.backdrop} open={loading}>
         <CircularProgress color="inherit" />
       </Backdrop>
-      <Header onSearch={(txt) => history.push(`/?searchText=${txt}`)} />
+      <Header onSearch={(txt) => history.push(`/youtube/?searchText=${txt}`)} />
       <div
         style={{
           display: "flex",
