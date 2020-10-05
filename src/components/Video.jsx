@@ -27,7 +27,7 @@ const Video = ({
         src={thumbnail.url}
         alt="video"
         style={{ cursor: "pointer" }}
-        onClick={() => history.push(`/play?videoId=${videoId}`)}
+        onClick={() => history.push(`/youtube/play?videoId=${videoId}`)}
       />
       <div
         style={{

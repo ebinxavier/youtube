@@ -23,11 +23,14 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Router>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/youtube">
               <Home />
             </Route>
-            <Route path="/play">
+            <Route path="/youtube/play">
               <Play />
+            </Route>
+            <Route exact path="*">
+              <Home />
             </Route>
           </Switch>
         </Router>
