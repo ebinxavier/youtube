@@ -1,0 +1,17 @@
+@media (max-width: 800px) {
+  .video {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1050px) {
+  .video {
+    width: 47% !important;
+  }
+}
+
+.video {
+  width: 32%;
+  margin: 15px 0;
+  padding: 5px;
+}

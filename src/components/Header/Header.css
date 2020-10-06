@@ -20,6 +20,34 @@
   cursor: pointer;
 }
 
-.search-input :focus {
-  background: red;
+.logo {
+  background-image: url("/youtube/logo.png");
+  width: 100px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+  .hide-on-md {
+    display: none !important;
+  }
+  .show-on-md {
+    display: inline-block !important;
+  }
+  .search-input{
+    width: 65% !important;
+  }
+}
+@media (min-width: 800px) {
+  .show-on-md {
+    display: none !important;
+  }
+}
+
+.search-box{
+  flex: 5px;
+  text-align: center;
 }

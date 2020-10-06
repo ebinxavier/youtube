@@ -3,7 +3,7 @@ import LeftButtons from "./components/LeftButtons";
 import RightButtons from "./components/RightButtons";
 import Search from "./components/Search";
 
-const Header = ({ onSearch, suggestions }) => {
+const Header = ({ onMenuClick, onSearch, suggestions }) => {
   return (
     <div
       style={{
@@ -11,7 +11,7 @@ const Header = ({ onSearch, suggestions }) => {
         flexWrap: "wrap",
       }}
     >
-      <LeftButtons />
+      <LeftButtons onMenuClick={onMenuClick} />
       <Search onSearch={onSearch} suggestions={suggestions}/>
       <RightButtons />
     </div>

@@ -29,9 +29,6 @@ const App = () => {
             <Route path="/youtube/play">
               <Play />
             </Route>
-            {/* <Route exact path="*">
-              <Home />
-            </Route> */}
           </Switch>
         </Router>
       </ThemeProvider>

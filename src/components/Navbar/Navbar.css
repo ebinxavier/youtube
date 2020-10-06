@@ -6,6 +6,6 @@
   vertical-align: middle;
   font-size: 14px;
 }
-.hover-item :hover{
-    background-color: red !important;
+.hover-item :hover {
+  background-color: red !important;
 }

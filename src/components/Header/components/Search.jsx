@@ -29,8 +29,7 @@ const Search = ({ onSearch }) => {
     setSearchText(txt);
     setTimerId(
       setTimeout(() => {
-        if(txt)
-        onSearchSuggestions(txt);
+        if (txt) onSearchSuggestions(txt);
       }, 500)
     );
   };
@@ -53,8 +52,8 @@ const Search = ({ onSearch }) => {
     ? inputRef.current.getBoundingClientRect()
     : {};
   return (
-    <>
-      <div className="primary-bg" style={{ flex: 5, textAlign: "center" }}>
+    <div style={{flex:5}}>
+      <div className="primary-bg search-box">
         <input
           ref={inputRef}
           onChange={onChange}
@@ -101,7 +100,7 @@ const Search = ({ onSearch }) => {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

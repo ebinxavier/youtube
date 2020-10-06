@@ -1,9 +1,9 @@
 import { Backdrop, CircularProgress } from "@material-ui/core";
 import React, { useEffect, useRef, useState } from "react";
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
-import Video from "../components/Video";
-import { baseUrl, colorBgSecondary } from "../constants";
+import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
+import Video from "../../components/Video";
+import { baseUrl, colorBgSecondary } from "../../constants";
 import "./Home.css";
 import { makeStyles } from "@material-ui/core/styles";
 import { useHistory, useLocation } from "react-router-dom";
@@ -19,6 +19,7 @@ const Home = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchText, setSearchText] = useState();
   const [loading, setLoading] = useState(false);
+  const [menuOn, setMenuOn] = useState(true);
   const classes = useStyles();
   const list = useRef();
   const location = useLocation();
@@ -28,9 +29,7 @@ const Home = () => {
     if (!searchText) return;
     (async () => {
       setLoading(true);
-      const raw = await fetch(
-        `${baseUrl}/search?search=${searchText}`
-      );
+      const raw = await fetch(`${baseUrl}/search?search=${searchText}`);
       const data = await raw.json();
       setSearchResults(data.result);
       setLoading(false);
@@ -38,7 +37,8 @@ const Home = () => {
   }, [searchText]);
 
   useEffect(() => {
-    setSearchText(location.search.split("searchText=")[1] || 'react.js');
+    setSearchText(location.search.split("searchText=")[1] || "react.js");
+    list.current.scrollTo(0, 0);
   }, [location]);
 
   useEffect(() => {
@@ -66,19 +66,26 @@ const Home = () => {
       <Backdrop className={classes.backdrop} open={loading}>
         <CircularProgress color="inherit" />
       </Backdrop>
-      <Header onSearch={(txt) => history.push(`/youtube/?searchText=${txt}`)} />
+      <Header
+        onMenuClick={() => setMenuOn(!menuOn)}
+        onSearch={(txt) => history.push(`/youtube/?searchText=${txt}`)}
+      />
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
         }}
       >
-        <div className="nav-bar-normal">
-          <Navbar type="normal" />
-        </div>
-        <div className="nav-bar-minimal">
-          <Navbar type="minimal" />
-        </div>
+        {menuOn && (
+          <>
+            <div className="nav-bar-normal">
+              <Navbar type="normal" />
+            </div>
+            <div className="nav-bar-minimal">
+              <Navbar type="minimal" />
+            </div>
+          </>
+        )}
         <div
           ref={list}
           style={{

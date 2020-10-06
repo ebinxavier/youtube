@@ -32,7 +32,7 @@ const Navbar = ({ type }) => {
       </div>
     );
   }
-  return <div style={{ width: 50 }}>This is Small</div>;
+  return null
 };
 
 export default Navbar;

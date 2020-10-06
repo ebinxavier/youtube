@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { colorTextSecondary, colorTextPrimary } from "../constants";
+import { colorTextSecondary, colorTextPrimary } from "../../constants";
+import "./Video.css";
 
 const Video = ({
   thumbnail,
@@ -15,10 +16,8 @@ const Video = ({
   const history = useHistory();
   return (
     <div
+      className="video"
       style={{
-        width: "32%",
-        margin: "15px 0",
-        padding: 5,
         color: colorTextSecondary,
       }}
     >
