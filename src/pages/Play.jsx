@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 
 const Play = () => {
   const history = useHistory();
-  console.log("history", history);
   let videoId = history.location.search.split("videoId=");
   if (videoId[1]) {
     videoId = videoId[1];
