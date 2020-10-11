@@ -14,7 +14,6 @@ const Search = ({ onSearch }) => {
   const inputRef = useRef();
 
   const onSearchSuggestions = async (text) => {
-    console.log(text);
     setLoading(true);
     const raw = await fetch(`${baseUrl}/suggestions?search=${searchText}`);
     const data = await raw.json();
