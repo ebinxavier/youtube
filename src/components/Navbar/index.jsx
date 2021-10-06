@@ -22,6 +22,7 @@ const subItems = [
   { name: "Watch Later", icon: <WatchLater className="item" /> },
 ];
 
+//The Navbar Component.
 const Navbar = ({ type }) => {
   if (type === "normal") {
     return (
