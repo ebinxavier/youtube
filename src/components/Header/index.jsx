@@ -3,6 +3,7 @@ import LeftButtons from "./components/LeftButtons";
 import RightButtons from "./components/RightButtons";
 import Search from "./components/Search";
 
+//The header component.
 const Header = ({ onMenuClick, onSearch, suggestions }) => {
   return (
     <div
