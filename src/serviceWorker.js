@@ -139,3 +139,15 @@ export function unregister() {
       });
   }
 }
+
+export function unregistered() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready
+      .then(registration => {
+        registration.unregister();
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
+  }
+}
