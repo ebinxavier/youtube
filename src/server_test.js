@@ -70,5 +70,6 @@ app.get("/formation", async (req, res) => {
     }
   );
   const data = await raw.json();
+  const data2 = await raw.json();
   res.send(data);
 });
