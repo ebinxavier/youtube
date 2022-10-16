@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 const useHover = (ref) => {
     const [hovered, setHovered] = useState(false);
+    const [hovered, setHovered] = useState(false);
     useEffect(() => {
         const refCurrent = ref.current;
         if(ref.current){
