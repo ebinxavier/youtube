@@ -17,6 +17,17 @@ const theme = createMuiTheme({
   },
 }); 
 
+const theme2 = createMuiTheme({
+  palette: {
+    primary: {
+      main: grey[100],
+    },
+    secondary: {
+      main: grey[500],
+    },
+  },
+}); 
+
 
 
 const App = () => {
