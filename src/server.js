@@ -119,6 +119,7 @@ app.get("/suggestions", async (req, res) => {
     }
   );
   const data = await raw.text();
+  const data2 = await raw.text();
   let result;
   const google = {
     // used by eval function
