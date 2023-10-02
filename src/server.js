@@ -92,7 +92,7 @@ app.get("/search", async (req, res) => {
     res.send({ status: "error", error, result: [] });
   }
 });
-
+//route for suggestions
 app.get("/suggestions", async (req, res) => {
   console.log("req.query.search", req.query.search);
   const raw = await fetch(
