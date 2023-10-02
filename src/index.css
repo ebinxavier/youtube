@@ -22,3 +22,7 @@ body {
 textarea:focus, input:focus{
   outline: white;
 }
+
+.banner{
+  display:block;
+}
